@@ -1,0 +1,991 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript
+    ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PX9526X"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+    ></iframe
+></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- MARKETO LP -->
+<style>
+    div#innerWrapDiv {
+        width: 100% !important;
+        height: 100vh !important;
+    }
+    #innerWrapDiv > div:nth-child(2) {
+        position: relative !important;
+    }
+</style>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        min-height: 100vh;
+        text-rendering: optimizeSpeed;
+        line-height: 1.5;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    ul,
+    li {
+        list-style: none;
+    }
+    img {
+        max-width: 100%;
+        display: block;
+    }
+    input,
+    button,
+    textarea,
+    select {
+        font: inherit;
+    }
+    @font-face {
+        font-family: "Interstate";
+        font-display: swap;
+        src: url("https://resources.trendmicro.com/rs/945-CXD-062/images/INTERSTATE-EXTRALIGHT.OTF");
+        font-weight: 300;
+    }
+    @font-face {
+        font-family: "Interstate";
+        font-display: swap;
+        src: url("https://resources.trendmicro.com/rs/945-CXD-062/images/INTERSTATE-BOLD.OTF");
+        font-weight: 700;
+    }
+    :root {
+        --spacing: 4rem;
+        --white: #fff;
+        --gray-light: #b5b5b5;
+        --gray-medium: #545454;
+        --gray-dark: #1e1e1e;
+        --black: #000;
+        --clr-accent: #fa121c;
+        --ff-trend-bold: "Interstate Bold Cond", "Montserrat", sans-serif;
+        --ff-trend-regular: "Interstate Regular Comp", "Montserrat" sans-serif;
+        --ff-mont: "Montserrat", sans-serif;
+        --ff-space: "Space Grotesk", sans-serif;
+    }
+    @media (min-width: 45em) {
+        :root {
+            --spacing: 5rem;
+        }
+    }
+    @media (min-width: 70em) {
+        :root {
+            --spacing: 5.5rem;
+        }
+    }
+    * {
+        font-family: var(--ff-mont);
+    }
+    html {
+        font-size: 93.75%;
+    }
+    @media (min-width: 45em) {
+        html {
+            font-size: 100%;
+        }
+    }
+    body {
+        color: var(--white);
+        background-color: var(--gray-dark);
+    }
+    .container {
+        width: min(90%, 80rem);
+        margin-inline: auto;
+    }
+    .spacing {
+        padding-block: var(--spacing);
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 0.75rem 2rem;
+        background: var(--clr-accent);
+        color: var(--white);
+        font-weight: 700;
+        border-radius: 100vmax;
+        font-family: var(--ff-mont);
+        min-width: 20rem;
+        text-align: center;
+        display: grid;
+        max-width: max-content;
+    }
+    .btn.center {
+        margin-inline: auto;
+    }
+    .btn:hover,
+    .btn:focus {
+        transition: all 200ms ease;
+        filter: brightness(0.8);
+    }
+    .section-title {
+        font-size: clamp(1.75rem, 3.5vw, 2rem);
+        line-height: 1.4;
+        margin-bottom: 2rem;
+        max-width: 35ch;
+        font-weight: 700;
+        color: var(--white);
+        text-align: center;
+        margin-inline: auto;
+    }
+    .section-title::before {
+        content: "";
+        display: block;
+        background-color: var(--clr-accent);
+        width: 80px;
+        height: 4px;
+        border-radius: 100vmax;
+        margin-inline: auto;
+        margin-bottom: 1.5rem;
+    }
+    @media (min-width: 70em) {
+        .section-title {
+            margin-bottom: 2.15rem;
+        }
+    }
+    .ff-trend-bold {
+        font-family: var(--ff-trend-bold);
+    }
+    .ff-trend-regular {
+        font-family: var(--ff-trend-regular);
+    }
+    .ff-mont {
+        font-family: var(--ff-mont);
+    }
+    .ff-space {
+        font-family: var(--ff-space);
+    }
+    .fw-light {
+        font-weight: 300;
+    }
+    .flow > * + * {
+        margin-top: 1rem;
+    }
+    ::-webkit-scrollbar {
+        width: 0.95em;
+    }
+    ::-webkit-scrollbar-track {
+        background: #666;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: red;
+        border: 2px solid #666;
+        border-radius: 10px;
+    }
+
+    .hero {
+        --space: 1.5rem;
+        background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/cloudone-otim__hero-bg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: 60%;
+        background-color: rgba(0, 0, 0, 0.85);
+        background-blend-mode: multiply;
+        min-height: 70vh;
+    }
+    @media (min-width: 45em) {
+        .hero {
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+    .hero__container .logos {
+        max-width: 18rem;
+        margin-bottom: var(--spacing);
+    }
+
+    .hero__container h1 {
+        font-size: clamp(2rem, 3.5vw, 2.5rem);
+        line-height: 1.4;
+        margin-bottom: var(--space);
+        max-width: 20ch;
+    }
+
+    .hero__container p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .hero__container p + p {
+        margin-top: 1.5rem;
+    }
+
+    .hero__container #form h3 strong {
+        color: var(--clr-accent);
+    }
+
+    .hero__container {
+        display: grid;
+        gap: 2rem;
+    }
+
+    #form {
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 0px 32px rgba(91, 94, 201, 0.1);
+        border-radius: 8px;
+        color: #000;
+        padding: 2rem 1rem;
+    }
+
+    #form h3 {
+        text-align: center;
+        max-width: 24ch;
+        margin-inline: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    #form p {
+        text-align: center;
+        margin-inline: auto;
+        font-size: 14px;
+    }
+
+    @media (min-width: 45em) {
+        .hero {
+            --space: 1.75rem;
+        }
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .hero__container {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        #form {
+            padding: 3rem 2rem;
+        }
+    }
+    @media (min-width: 70em) {
+        .hero {
+            --space: 2rem;
+            background-blend-mode: unset;
+            background-position: top center;
+            min-height: 80vh;
+        }
+        .hero .logos {
+            max-width: 22rem;
+        }
+
+        .hero__container {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4.5rem;
+        }
+
+        .hero__container p {
+            max-width: 50ch;
+        }
+
+        .hero__container h3 {
+            font-size: 1.25rem;
+        }
+    }
+
+    /* Monitore */
+
+    .monitore {
+        background-color: #131313;
+    }
+
+    .monitore__container h2 {
+        font-size: 2rem;
+        text-align: center;
+        line-height: 1.3;
+        max-width: 30ch;
+        margin-inline: auto;
+        margin-bottom: 3rem;
+    }
+
+    .monitore__container .btn {
+        margin-top: 2rem;
+        margin-inline: auto;
+    }
+
+    .monitore__container ul {
+        display: grid;
+        justify-items: center;
+    }
+
+    .monitore__container ul li {
+        display: grid;
+        justify-items: center;
+        grid-template-rows: min-content 1fr;
+        text-align: center;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 40ch;
+        padding: 2rem 2.8125rem;
+    }
+
+    .monitore__video {
+        display: grid;
+        gap: 1.5rem;
+        margin-block: 5rem;
+        justify-items: center;
+    }
+
+    .monitore__video h3 {
+        font-size: 1.5rem;
+    }
+
+    .monitore__video iframe {
+        width: 100%;
+        max-width: 45rem;
+        aspect-ratio: 16/9;
+    }
+
+    @media (min-width: 40em) {
+        .monitore__container ul {
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+    }
+
+    @media (min-width: 1030px) {
+        .monitore__container ul {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    /* Segurança */
+    .seguranca__container {
+        display: grid;
+        gap: 3rem;
+    }
+
+    .seguranca__container h2 {
+        max-width: 20ch;
+        font-weight: 700;
+        font-size: clamp(2rem, 3.5vw, 2.25rem);
+        line-height: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .seguranca__container p {
+        max-width: 50ch;
+    }
+
+    .seguranca__container p + p {
+        margin-top: 1.25rem;
+    }
+
+    .seguranca__container a,
+    .seguranca__container button {
+        margin-top: 3rem;
+    }
+
+    @media (min-width: 45em) {
+        .seguranca__container {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+    }
+
+    .footer {
+        background-color: var(--black);
+        color: var(--gray-light);
+    }
+    .footer__container {
+        display: grid;
+        place-items: center;
+        font-size: 0.9rem;
+        text-align: center;
+        padding-block: 1.5rem;
+    }
+
+    /* TP */
+
+    .tkp {
+        display: grid;
+        min-height: 100vh;
+        grid-template-rows: 1fr max-content;
+    }
+
+    .tp_hero {
+        --space: 1.5rem;
+
+        background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/cloudone-otim__hero-bg.png");
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: multiply;
+    }
+    .tp_hero .logos {
+        max-width: 18rem;
+        margin-bottom: var(--spacing);
+    }
+
+    .tp_hero h1 {
+        font-size: 2.5rem;
+        max-width: 16ch;
+        line-height: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .tp_hero p {
+        font-size: 1rem;
+        max-width: 45ch;
+    }
+
+    .tp_hero p + p {
+        margin-top: 1rem;
+    }
+
+    .tp_hero .btn {
+        margin-top: 2.75rem;
+        margin-bottom: 2rem;
+
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding-left: 1.25rem;
+        justify-content: center;
+        max-width: 17rem;
+        min-width: 1rem;
+    }
+
+    @media (min-width: 45em) {
+        .tp_hero h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    @media (min-width: 70em) {
+        .tp_hero {
+            background-blend-mode: unset;
+        }
+        .tp_hero .logos {
+            max-width: 22rem;
+        }
+    }
+
+    /* ----------------------------------- FORM ---------------------------------------- */
+    #mktoForm_25689 {
+        max-width: 40rem !important;
+        width: 100% !important;
+        margin-top: 1.5rem;
+    }
+
+    #LblGlobalPRM_MSP_Agree_to_MSP_terms__c {
+        width: 100% !important;
+        position: relative !important;
+        text-indent: 30px !important;
+        font-size: 0.8rem !important;
+        font-weight: 400 !important;
+        line-height: 1.5;
+        cursor: pointer;
+        text-align: justify;
+    }
+
+    #GlobalPRM_MSP_Agree_to_MSP_terms__c {
+        top: 5px;
+        left: 17px;
+        position: absolute !important;
+        width: auto !important;
+        padding: 0.25rem !important;
+        cursor: pointer;
+    }
+
+    .mktoForm input[type="text"],
+    .mktoForm input[type="url"],
+    .mktoForm input[type="email"],
+    .mktoForm input[type="tel"],
+    .mktoForm input[type="number"],
+    .mktoForm input[type="date"],
+    .mktoForm textarea.mktoField,
+    .mktoForm select.mktoField {
+        display: block !important;
+
+        padding: 0.25em 1em !important;
+        min-height: 38px !important;
+        width: 100% !important;
+        border-radius: 10px;
+        outline: none;
+        border: 1px solid #cccccc !important;
+        border: none;
+        margin-top: 0.25rem !important;
+        font-size: 1rem;
+        font-weight: 400;
+        background-color: transparent !important;
+        color: black !important;
+    }
+
+    input::placeholder,
+    select::placeholder {
+        font-size: 1rem !important;
+        opacity: 0.8;
+    }
+
+    .mktoForm select.mktoField {
+        background-image: url(https://resources.trendmicro.com/rs/945-CXD-062/images/trendmicro-select.svg);
+        background-repeat: no-repeat;
+        background-position: 95% center;
+        background-size: 10px;
+        appearance: none;
+    }
+
+    .mktoForm .mktoRequiredField label.mktoLabel {
+        display: block;
+        float: none;
+        color: rgb(87, 87, 87) !important;
+        width: 100% !important;
+        padding-left: 15px;
+        font-size: 0.9rem;
+        font-weight: 400 !important;
+    }
+
+    .mktoForm .mktoFieldWrap {
+        float: none !important;
+    }
+
+    .mktoForm .mktoFormCol {
+        float: none !important;
+    }
+    .mktoGutter.mktoHasWidth {
+        width: auto !important;
+    }
+
+    .mktoAsterix {
+        color: var(--clr-accent) !important;
+        float: none !important;
+        position: absolute;
+        left: 0;
+        font-size: 1.25rem;
+    }
+
+    .mktoButtonRow {
+        width: 100%;
+    }
+
+    .mktoButtonWrap.mktoBlueBox {
+        margin: 0 !important;
+    }
+
+    .mktoButtonRow .mktoButtonWrap .mktoButton {
+        display: inline-block;
+        cursor: pointer;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        width: 100% !important;
+        padding: 0.65em 2em !important;
+        margin-top: 1rem;
+        background-color: var(--clr-accent) !important;
+        font-weight: 500 !important;
+        font-size: 1.125rem !important;
+        border-radius: 100vmax !important;
+        text-shadow: none !important;
+
+        color: var(--white) !important;
+        background-image: none !important;
+        border: none !important;
+    }
+
+    .mktoForm .mktoError .mktoErrorMsg {
+        background-image: none !important;
+        /* background-color: #000 !important; */
+        border: none !important;
+        text-shadow: none !important;
+        font-weight: 600 !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: rgb(0 0 0 / 65%) 0 2px 7px, inset #000000 0 1px 0px !important;
+    }
+
+    @media (min-width: 700px) {
+        /* .mktoFormRow:nth-child(2) {
+grid-area: row1;
+display: grid;
+justify-content: space-between;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 3.5rem;
+gap: 1.25rem;
+height: auto !important;
+align-self: end !important;
+} */
+    }
+
+    .mktoFormRow:nth-child(6) {
+        grid-column: span 2;
+    }
+
+    .mktoForm .mktoError .mktoErrorMsg .mktoErrorDetail {
+        font-size: 1rem !important;
+        color: #ffffff !important;
+        text-transform: unset;
+        font-weight: 400;
+        font-size: unset !important;
+        display: inline;
+        letter-spacing: unset;
+        margin-bottom: 0;
+    }
+
+    .mktoFieldDescriptor.mktoFormCol {
+        width: 100% !important;
+    }
+
+    .mktoAsterix {
+        display: block !important;
+    }
+</style>
+
+<section class="hero spacing">
+    <div class="container hero__container">
+        <div class="content">
+            <img
+                src="https://hml.bowe.com.br/trend/__PROD/cloud-one/otim-cloudone-seguranca--logos2.png"
+                alt="Logo Trend micro e AWS lado a lado"
+                class="logos"
+            />
+
+            <h1 class="ff-trend-bold">
+                Garanta segurança de informação na nuvem com o Cloud One
+            </h1>
+
+            <p>
+                Mantenha a segurança de suas soluções em nuvem e contêineres sem
+                comprometer seu desempenho ou segurança, com uma solução SaaS
+                abrangente e unificada.
+            </p>
+
+            <p>
+                O Trend Micro Cloud One garante a proteção para serviços de
+                armazenamento de arquivos e objetos em nuvem baseados em
+                arquiteturas de aplicações nativas. Além de oferecer mais
+                visibilidade para a governança da sua nuvem.
+            </p>
+
+            <p>
+                Conheça todos os recursos da plataforma e transforme seu
+                gerenciamento!
+            </p>
+        </div>
+
+        <div id="form">
+            <h3 class="ff-trend-bold">
+                Preencha o formulário e
+                <strong>ganhe um trial de 30 dias grátis!</strong>
+            </h3>
+            <p>Não se preocupe, seus dados estarão sempre seguros conosco.</p>
+            <script src="//resources.trendmicro.com/js/forms2/js/forms2.min.js"></script>
+            <form id="mktoForm_25689"></form>
+            <script>
+                MktoForms2.loadForm(
+                    "//resources.trendmicro.com",
+                    "945-CXD-062",
+                    25689,
+                    function (form) {
+                        form.onSuccess(function (values, followUpUrl) {
+                            location.href =
+                                "https://hml.bowe.com.br/trend/otimizacao/cloud-one/obrigado.html";
+                            return false;
+                        });
+                    }
+                );
+
+                MktoForms2.whenReady(function (form) {
+                    form.onValidate(function () {
+                        let vals = form.vals();
+                        let email = form.vals().Email;
+
+                        form.submitable(false);
+
+                        if (!isEmailGood(email)) {
+                            var emailElem = form.getFormElem().find("#Email");
+                            form.showErrorMessage(
+                                "Insira um email comercial.",
+                                emailElem
+                            );
+                            form.submitable(false);
+                        } else {
+                            form.submitable(true);
+                        }
+                    });
+                });
+
+                function isEmailGood(email) {
+                    const invalidDomains = [
+                        "@gmail.",
+                        "@yahoo.",
+                        "@hotmail.",
+                        "@live.",
+                        "@aol.",
+                        "@outlook.",
+                        "@bol.",
+                        "@ig.",
+                        "@icloud.",
+                        "@terra.",
+                        "@me.",
+                        "@uol.",
+                    ];
+
+                    for (var i = 0; i < invalidDomains.length; i++) {
+                        var domain = invalidDomains[i];
+                        if (email.indexOf(domain) != -1) {
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+            </script>
+            <style>
+                .mktoForm .mktoRequiredField .mktoAsterix {
+                    display: block !important;
+                }
+            </style>
+        </div>
+    </div>
+</section>
+
+<section class="monitore spacing">
+    <div class="container monitore__container">
+        <h2 class="ff-trend-bold">
+            Monitore sua infraestrutura em nuvem em tempo real, e muito mais!
+        </h2>
+
+        <ul class="monitore__list">
+            <li>
+                <svg
+                    width="64"
+                    height="64"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <circle cx="32" cy="32" r="32" fill="#FA121C" />
+                    <path
+                        d="M31.5 20C23.9535 20 16.9142 24.4007 13.129 31.4851C12.957 31.808 12.957 32.1942 13.129 32.5171C16.9142 39.5993 23.9535 44 31.5 44C39.0465 44 46.0858 39.5993 49.871 32.5149C50.043 32.192 50.043 31.8058 49.871 31.4829C46.0858 24.4007 39.0465 20 31.5 20ZM31.5 41.8182C24.9395 41.8182 18.7948 38.072 15.3296 32C18.7948 25.928 24.9395 22.1818 31.5 22.1818C38.0605 22.1818 44.2052 25.928 47.6704 32C44.2052 38.072 38.0605 41.8182 31.5 41.8182Z"
+                        fill="white"
+                    />
+                    <path
+                        d="M32 26C31.2656 26 30.572 26.1512 29.9216 26.3912C30.6512 26.8448 31.1432 27.6488 31.1432 28.5704C31.1432 29.9912 29.9912 31.1408 28.5728 31.1408C27.6488 31.1408 26.8472 30.6512 26.3936 29.9192C26.1512 30.572 26 31.2656 26 32C26 35.3144 28.6856 38 32 38C35.3144 38 38 35.3144 38 32C38 28.6856 35.3144 26 32 26Z"
+                        fill="white"
+                    />
+                </svg>
+
+                <p>
+                    Visualize seu status de risco e resolva violações com guias
+                    de passo a passo e correção automática
+                </p>
+            </li>
+
+            <li>
+                <svg
+                    width="64"
+                    height="64"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <circle cx="32" cy="32" r="32" fill="#FA121C" />
+                    <path
+                        d="M26.5499 43C26.1123 43 25.6928 42.8346 25.3834 42.54L15.4832 33.1109C14.8389 32.4973 14.8389 31.5025 15.4832 30.8889C16.1276 30.2752 17.1725 30.2752 17.8164 30.8889L26.5499 39.2065L45.1836 21.4602C45.828 20.8466 46.8728 20.8466 47.5168 21.4602C48.1611 22.0739 48.1611 23.069 47.5168 23.6826L27.7165 42.54C27.4071 42.8346 26.9876 43 26.5499 43Z"
+                        fill="white"
+                    />
+                </svg>
+
+                <p>
+                    Faça varreduras contínuas em verificações de práticas
+                    recomendadas do setor
+                </p>
+            </li>
+
+            <li>
+                <svg
+                    width="64"
+                    height="64"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <circle cx="32" cy="32" r="32" fill="#FA121C" />
+                    <path
+                        d="M15.3153 23.0949L28.077 37.5455V49L35.923 43.9091V37.5455L48.6847 23.0949C49.4117 22.2676 48.801 21 47.6738 21H16.3262C15.199 21 14.5883 22.2676 15.3153 23.0949Z"
+                        stroke="white"
+                        stroke-width="2.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+
+                <p>
+                    Aproveite relatórios padronizados ou personalizados,
+                    auditando sua infraestrutura com uma combinação infinita de
+                    filtros
+                </p>
+            </li>
+
+            <li>
+                <svg
+                    width="64"
+                    height="64"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <circle cx="32" cy="32" r="32" fill="#FA121C" />
+                    <path
+                        d="M34.31 27.266C33.9601 27.041 33.552 26.98 33.175 27.064C32.802 27.147 32.46 27.372 32.237 27.719C32.013 28.068 31.9521 28.474 32.0351 28.849C32.117 29.224 32.3421 29.5679 32.69 29.791C34.137 30.718 35.0001 32.292 35.0001 34C35.0001 35.336 34.4801 36.591 33.5361 37.535L27.5361 43.535C26.5911 44.4799 25.3351 45 24.0001 45C21.243 45 19.0001 42.757 19.0001 40C19.0001 38.664 19.5201 37.409 20.4641 36.465L23.3101 33.618C23.61 33.3181 23.7561 32.923 23.7501 32.53C23.7431 32.155 23.5971 31.783 23.3101 31.497C23.017 31.204 22.633 31.057 22.2501 31.057C21.8661 31.057 21.4821 31.203 21.1901 31.497L18.3441 34.344C16.832 35.854 16 37.863 16 40C16 44.411 19.589 48 24 48C26.137 48 28.146 47.168 29.657 45.656L35.657 39.656C37.1679 38.147 38 36.137 38 34C38 31.265 36.621 28.748 34.31 27.266ZM40 16C37.863 16 35.854 16.832 34.343 18.344L28.343 24.344C26.832 25.853 26 27.863 26 29.999C26 32.734 27.379 35.252 29.69 36.734C30.04 36.958 30.448 37.019 30.825 36.935C31.198 36.853 31.54 36.628 31.763 36.281C31.987 35.931 32.048 35.525 31.965 35.15C31.883 34.775 31.658 34.431 31.31 34.209C29.8639 33.281 28.9999 31.707 28.9999 29.999C28.9999 28.663 29.5199 27.408 30.4639 26.464L36.4639 20.464C37.409 19.52 38.665 19 40 19C42.757 19 45 21.243 45 23.999C45 25.335 44.48 26.59 43.536 27.534L40.69 30.38C40.39 30.68 40.244 31.075 40.25 31.468C40.257 31.843 40.403 32.2151 40.69 32.501C40.983 32.794 41.367 32.94 41.751 32.94C42.135 32.94 42.519 32.794 42.811 32.501L45.657 29.654C47.168 28.146 48 26.136 48 23.999C48 19.589 44.411 16 40 16Z"
+                        fill="white"
+                    />
+                </svg>
+
+                <p>
+                    Integre perfeitamente seu pipeline de CI/CD a APIs poderosas
+                </p>
+            </li>
+
+            <li>
+                <svg
+                    width="64"
+                    height="64"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <circle cx="32" cy="32" r="32" fill="#FA121C" />
+                    <path
+                        d="M43.8801 43.2596H19.122C18.9301 43.2591 18.7416 43.2094 18.5744 43.1155C18.4071 43.0216 18.2666 42.8865 18.1663 42.723C18.0659 42.5595 18.009 42.373 18.001 42.1814C17.993 41.9897 18.0341 41.7992 18.1204 41.6278C19.5089 38.8291 20.2366 35.7491 20.2473 32.6249V28.6298C20.2473 25.6451 21.433 22.7827 23.5435 20.6722C25.654 18.5618 28.5164 17.3761 31.501 17.3761C34.4857 17.3761 37.3481 18.5618 39.4586 20.6722C41.5691 22.7827 42.7548 25.6451 42.7548 28.6298V32.6024C42.7655 35.7266 43.4932 38.8066 44.8817 41.6053C44.9734 41.7774 45.0187 41.9704 45.0133 42.1653C45.008 42.3602 44.9521 42.5504 44.8511 42.7171C44.7501 42.8839 44.6075 43.0216 44.4373 43.1167C44.2671 43.2118 44.0751 43.2611 43.8801 43.2596ZM20.8663 41.0089H42.1358C41.0626 38.3359 40.5088 35.4828 40.504 32.6024V28.6298C40.504 26.2421 39.5555 23.9521 37.8671 22.2637C36.1787 20.5754 33.8888 19.6268 31.501 19.6268C29.1133 19.6268 26.8234 20.5754 25.135 22.2637C23.4466 23.9521 22.4981 26.2421 22.4981 28.6298V32.6024C22.4933 35.4828 21.9395 38.3359 20.8663 41.0089Z"
+                        fill="white"
+                    />
+                    <path
+                        d="M31.501 47.7611C30.0087 47.7611 28.5775 47.1683 27.5222 46.1131C26.467 45.0578 25.8741 43.6266 25.8741 42.1343C25.8741 41.8358 25.9927 41.5496 26.2038 41.3385C26.4148 41.1275 26.701 41.0089 26.9995 41.0089C27.298 41.0089 27.5842 41.1275 27.7953 41.3385C28.0063 41.5496 28.1249 41.8358 28.1249 42.1343C28.1257 43.0294 28.4819 43.8875 29.1152 44.5201C29.7592 45.1312 30.6132 45.4718 31.501 45.4718C32.3888 45.4718 33.2428 45.1312 33.8868 44.5201C33.9917 44.4151 34.1163 44.3319 34.2534 44.2751C34.3905 44.2183 34.5374 44.1891 34.6858 44.1891C34.8342 44.1891 34.9811 44.2183 35.1182 44.2751C35.2553 44.3319 35.3799 44.4151 35.4848 44.5201C35.5897 44.625 35.673 44.7496 35.7298 44.8867C35.7865 45.0238 35.8158 45.1707 35.8158 45.3191C35.8158 45.4675 35.7865 45.6144 35.7298 45.7515C35.673 45.8886 35.5897 46.0132 35.4848 46.1181C34.9613 46.6403 34.34 47.0542 33.6564 47.3361C32.9729 47.618 32.2404 47.7625 31.501 47.7611Z"
+                        fill="white"
+                    />
+                    <path
+                        d="M31.501 19.6269C31.2025 19.6269 30.9163 19.5083 30.7052 19.2972C30.4942 19.0862 30.3756 18.8 30.3756 18.5015V15.1254C30.3756 14.8269 30.4942 14.5407 30.7052 14.3296C30.9163 14.1186 31.2025 14 31.501 14C31.7994 14 32.0857 14.1186 32.2967 14.3296C32.5078 14.5407 32.6264 14.8269 32.6264 15.1254V18.5015C32.6264 18.8 32.5078 19.0862 32.2967 19.2972C32.0857 19.5083 31.7994 19.6269 31.501 19.6269Z"
+                        fill="white"
+                    />
+                </svg>
+
+                <p>
+                    Obtenha alertas em tempo real de alterações de configuração
+                    arriscadas
+                </p>
+            </li>
+
+            <li>
+                <svg
+                    width="64"
+                    height="64"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <circle cx="32" cy="32" r="32" fill="#FA121C" />
+                    <path
+                        d="M33.0625 19H29.9375V30.375H19V33.625H29.9375V45H33.0625V33.625H44V30.375H33.0625V19Z"
+                        fill="white"
+                    />
+                </svg>
+
+                <p>E muito mais!</p>
+            </li>
+        </ul>
+
+        <div class="monitore__video">
+            <h3>Assista a um vídeo com mais detalhes sobre nossa solução:</h3>
+
+            <iframe
+                src="https://www.youtube.com/embed/9NQA_mjbdNY"
+                title="O QUE É O TREND MICRO CLOUD ONE?"
+                frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                class="video"
+            ></iframe>
+        </div>
+
+        <a href="#form" class="btn">Quero conhecer todos os recursos</a>
+    </div>
+</section>
+
+<section class="seguranca spacing">
+    <div class="container seguranca__container">
+        <div class="content">
+            <h2 class="ff-trend-bold">
+                Sua segurança é nossa maior prioridade
+            </h2>
+            <p>
+                Tenha uma plataforma que forneça para sua empresa segurança de
+                armazenamento de arquivos e objetos em nuvem baseados em
+                arquiteturas de aplicações nativas.
+            </p>
+            <p>
+                E ainda detecte e proteja aplicações modernas e APIs criadas em
+                suas plataformas de contêineres ou serverless.
+            </p>
+            <p>
+                Tudo isso oferecendo segurança de camada de rede poderosa e
+                integrada, com proteção, detecção e disrupção de ameaças para
+                seu ambiente multi-cloud.
+            </p>
+
+            <a href="#form" class="btn">Teste o Cloud One gratuitamente</a>
+        </div>
+
+        <div class="image">
+            <img
+                src="https://hml.bowe.com.br/trend/__PROD/cloud-one/otim-cloudone-seguranca--img.png"
+                aria-hidden="true"
+                loading="lazy"
+                alt=""
+            />
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer__container">
+        <p>
+            Copyright &copy; 2022 Trend Micro Incorporated. Todos os direitos
+            reservados.
+        </p>
+    </div>
+</footer>
+
+<!-- Accordeon Script -->
+<script>
+    const accordeons = document.querySelectorAll(".accordeon");
+    const accButtons = Array.from(
+        document.querySelectorAll(".accordeon button")
+    );
+
+    accButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            const accordeon = button.parentElement;
+            const isExpanded = accordeon.getAttribute("aria-expanded");
+            const accMain = accordeon.querySelector("main");
+            const accMainHeight = accMain.scrollHeight;
+
+            if (isExpanded === "false") {
+                accMain.style.maxHeight = `${accMainHeight}px`;
+                accordeon.classList.add("active");
+
+                accordeon.setAttribute("aria-expanded", "true");
+            } else {
+                accMain.style.maxHeight = `0px`;
+                accordeon.classList.remove("active");
+
+                accordeon.setAttribute("aria-expanded", "false");
+            }
+        });
+    });
+</script>
